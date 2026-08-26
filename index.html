@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Markdown Viewer — Browser Extension</title>
+<meta name="description" content="A browser extension that opens .md files as clean, readable documents instead of raw text. Twelve themes. Works offline; nothing leaves your computer.">
+<link rel="icon" href="favicon.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <img src="favicon.png" alt="">
+    <span class="name">Markdown Viewer</span>
+    <nav>
+      <a href="#features">Features</a>
+      <a href="#themes">Themes</a>
+      <a href="#install">Install</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap hero">
+  <span class="badge">Browser Extension &middot; Free &middot; Works offline</span>
+  <h1>Markdown files, readable at last.</h1>
+  <p class="lead">
+    Open any <code>.md</code> file — on the web or on your own disk — and read it
+    as a clean, formatted document instead of raw text. Twelve themes, and not a
+    single network request.
+  </p>
+  <div class="cta">
+    <a class="btn primary" href="#install">Install</a>
+    <a class="btn" href="https://github.com/CaptaiN785/markdown-viewer">Source on GitHub</a>
+  </div>
+</div>
+
+<section id="features">
+  <div class="wrap">
+    <h2>What it does</h2>
+    <h3 class="title">Raw text in, readable document out</h3>
+    <p>
+      Browsers show Markdown files as a wall of plain text. This extension
+      notices when the page you opened is really a Markdown file and renders it
+      properly — and leaves every other page alone.
+    </p>
+
+    <div class="grid">
+      <div class="card">
+        <h4><span class="dot"></span>Everything you actually write</h4>
+        <p>Headings, bold and italic, code blocks, blockquotes, nested and task
+           lists, tables with alignment, links, images, horizontal rules.</p>
+      </div>
+      <div class="card">
+        <h4><span class="dot"></span>Twelve themes, remembered</h4>
+        <p>Switch from a control in the corner of the page. Your choice is saved,
+           synced by the browser, and applied live to every open Markdown tab.</p>
+      </div>
+      <div class="card">
+        <h4><span class="dot"></span>Frontmatter handled</h4>
+        <p>YAML frontmatter is shown as a muted block instead of breaking the
+           layout the way raw renderers do.</p>
+      </div>
+      <div class="card">
+        <h4><span class="dot"></span>Anchors that work</h4>
+        <p>Headings get GitHub-style ids, so <code>#section</code> links land
+           exactly where they should.</p>
+      </div>
+      <div class="card">
+        <h4><span class="dot"></span>Local files too</h4>
+        <p>Works on <code>file://</code> pages once you allow file access — read
+           your notes and READMEs straight off your disk.</p>
+      </div>
+      <div class="card">
+        <h4><span class="dot green"></span>Private by construction</h4>
+        <p>No server, no account, no analytics, no network requests. The only
+           thing it stores is the name of your theme.
+           <a href="privacy.html">Privacy policy</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="themes">
+  <div class="wrap">
+    <h2>Themes</h2>
+    <h3 class="title">Pick how your documents read</h3>
+    <p>
+      Light, dark, and everything between — the same document, restyled with one
+      click.
+    </p>
+
+    <div class="gallery">
+      <figure>
+        <img src="shots/screenshot-1-github-light.png" alt="Document rendered in the GitHub Light theme" loading="lazy">
+        <figcaption>GitHub Light</figcaption>
+      </figure>
+      <figure>
+        <img src="shots/screenshot-2-github-dark.png" alt="Document rendered in the GitHub Dark theme" loading="lazy">
+        <figcaption>GitHub Dark</figcaption>
+      </figure>
+      <figure>
+        <img src="shots/screenshot-3-dracula.png" alt="Document rendered in the Dracula theme" loading="lazy">
+        <figcaption>Dracula</figcaption>
+      </figure>
+      <figure>
+        <img src="shots/screenshot-4-gruvbox-light.png" alt="Document rendered in the Gruvbox Light theme" loading="lazy">
+        <figcaption>Gruvbox Light</figcaption>
+      </figure>
+      <figure>
+        <img src="shots/screenshot-5-tokyo-night.png" alt="Document rendered in the Tokyo Night theme" loading="lazy">
+        <figcaption>Tokyo Night</figcaption>
+      </figure>
+    </div>
+
+    <div class="theme-list">
+      <span>GitHub Light</span><span>GitHub Dark</span><span>Sepia</span>
+      <span>Nord</span><span>Solarized Light</span><span>Dracula</span>
+      <span>One Dark</span><span>Monokai</span><span>Gruvbox Dark</span>
+      <span>Gruvbox Light</span><span>Tokyo Night</span><span>Catppuccin Latte</span>
+    </div>
+  </div>
+</section>
+
+<section id="install">
+  <div class="wrap">
+    <h2>Install</h2>
+    <h3 class="title">Load it from source</h3>
+    <p>
+      Works in any Chromium browser — Chrome, Edge, Brave, Arc, Dia. A Chrome
+      Web Store listing is on the way; until then, install from source:
+    </p>
+
+    <ol class="steps">
+      <li><a href="https://github.com/CaptaiN785/markdown-viewer">Download or clone the repository</a> from GitHub.</li>
+      <li>Open <code>chrome://extensions</code> and switch on <strong>Developer mode</strong> (top right).</li>
+      <li>Click <strong>Load unpacked</strong> and select the repository folder.</li>
+      <li>For files on your disk: open the extension's <strong>Details</strong> page and enable
+          <strong>Allow access to file URLs</strong>.</li>
+      <li>Open any <code>.md</code> file — it renders. Pick a theme from the control in the top-right corner.</li>
+    </ol>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <span>Markdown Viewer</span>
+    <span class="spacer"></span>
+    <a href="https://github.com/CaptaiN785/markdown-viewer">GitHub</a>
+    <a href="privacy.html">Privacy</a>
+  </div>
+</footer>
+
+</body>
+</html>
