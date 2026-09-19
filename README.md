@@ -4,8 +4,19 @@ Landing page and privacy policy for
 [Rawlens](https://github.com/CaptaiN785/rawlens) — the Markdown, JSON & CSV
 viewer browser extension (formerly *Markdown Viewer*).
 
-Live at <https://rawlens.kryl.dev/>, served by Netlify from this repo
-(`netlify.toml`: publish the repo root, no build). `privacy.html` is the
+Live at <https://rawlens.kryl.dev/> on Netlify (project `rawlens`;
+`netlify.toml`: publish the repo root, no build). The Netlify project is **not
+connected to this repo** — a push does not deploy. Deploy by hand after merging
+to `main`:
+
+```
+netlify deploy --prod --dir . --site d2726fcf-7428-4e2f-ab56-6307414d702c
+```
+
+DNS: `rawlens.kryl.dev` is a DNS-only `CNAME` to `rawlens.netlify.app` in the
+`kryl.dev` Cloudflare zone; Netlify holds the certificate.
+
+`privacy.html` is the
 privacy-policy URL the Chrome Web Store listing depends on — once the listing
 is live, do not move that page, drop the custom domain, or let `kryl.dev`
 lapse.
