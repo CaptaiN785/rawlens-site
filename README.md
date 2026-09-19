@@ -13,8 +13,8 @@ to `main`:
 netlify deploy --prod --dir . --site d2726fcf-7428-4e2f-ab56-6307414d702c
 ```
 
-DNS: `rawlens.kryl.dev` is a DNS-only `CNAME` to `rawlens.netlify.app` in the
-`kryl.dev` Cloudflare zone; Netlify holds the certificate.
+DNS: `rawlens.kryl.dev` is a proxied `CNAME` to `rawlens.netlify.app` in the
+`kryl.dev` Cloudflare zone; Netlify's default certificate sits behind it.
 
 `privacy.html` is the
 privacy-policy URL the Chrome Web Store listing depends on — once the listing
