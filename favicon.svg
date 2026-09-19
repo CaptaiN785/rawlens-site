@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <!-- Rawlens mark: a raw file under a lens. Source for icon48/icon128;
+       icon-small.svg is the simplified cut for 16 and 32. -->
+  <rect width="128" height="128" rx="28" fill="#1f2328"/>
+  <!-- page with a folded corner -->
+  <path d="M38 18h34l22 22v62a8 8 0 0 1-8 8H38a8 8 0 0 1-8-8V26a8 8 0 0 1 8-8z" fill="#f6f8fa"/>
+  <path d="M72 18v14a8 8 0 0 0 8 8h14z" fill="#afb8c1"/>
+  <!-- raw text -->
+  <g fill="#1f2328">
+    <rect x="42" y="50" width="38" height="6" rx="3"/>
+    <rect x="42" y="64" width="26" height="6" rx="3"/>
+    <rect x="42" y="78" width="16" height="6" rx="3"/>
+  </g>
+  <!-- lens: dark halo separates it from the page -->
+  <circle cx="84" cy="84" r="19" fill="#1f2328" stroke="#1f2328" stroke-width="12"/>
+  <path d="M98 98l14 14" stroke="#1f2328" stroke-width="20" stroke-linecap="round"/>
+  <circle cx="84" cy="84" r="19" fill="#ddf4ff" stroke="#4493f8" stroke-width="8"/>
+  <path d="M99 99l13 13" stroke="#4493f8" stroke-width="10" stroke-linecap="round"/>
+  <!-- what the lens shows: the same text, readable -->
+  <g fill="#0969da">
+    <rect x="73" y="77" width="22" height="5" rx="2.5"/>
+    <rect x="73" y="87" width="14" height="5" rx="2.5"/>
+  </g>
+</svg>

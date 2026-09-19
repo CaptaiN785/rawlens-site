@@ -3,9 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Privacy Policy — Markdown Viewer</title>
-<meta name="description" content="Privacy policy for the Markdown Viewer browser extension. No data is collected or transmitted; the extension makes no network requests.">
-<link rel="icon" href="favicon.png">
+<title>Privacy Policy — Rawlens</title>
+<meta name="description" content="Privacy policy for the Rawlens browser extension (Markdown, JSON &amp; CSV viewer). No data is collected or transmitted; the extension makes no network requests.">
+<link rel="canonical" href="https://rawlens.kryl.dev/privacy.html">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon.png" type="image/png">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,7 +15,7 @@
 <header class="site">
   <div class="wrap">
     <img src="favicon.png" alt="">
-    <span class="name">Markdown Viewer</span>
+    <span class="name">Rawlens</span>
     <nav>
       <a href="index.html">Home</a>
       <a href="privacy.html">Privacy</a>
@@ -24,12 +26,12 @@
 <div class="wrap prose">
 
   <h1>Privacy Policy</h1>
-  <p class="updated">Markdown Viewer (browser extension) &middot; Last updated 26 August 2026</p>
+  <p class="updated">Rawlens — Markdown, JSON &amp; CSV Viewer (browser extension, formerly "Markdown Viewer") &middot; Last updated 20 September 2026</p>
 
   <div class="callout">
     <p>
-      <strong>Summary:</strong> Markdown Viewer does not collect, transmit, or share any
-      of your data. It makes no network requests. The only thing it stores is which
+      <strong>Summary:</strong> Rawlens does not collect, transmit, or share any of
+      your data. It makes no network requests. The only thing it stores is which
       theme you picked.
     </p>
   </div>
@@ -51,11 +53,26 @@
 
   <h2>What the extension reads</h2>
   <p>
-    To render a Markdown file, the extension reads the text of the page you opened —
-    only when that page is a raw Markdown file (a <strong>.md</strong> address showing
-    plain text). The text is converted to formatted HTML entirely on your device and
-    never leaves it. Pages that are not raw Markdown files are left untouched, and
-    nothing about them is read or recorded.
+    The extension renders raw Markdown, JSON, and CSV. Because a JSON response can live
+    at any address, a small check runs on each page you open: it looks at the page's
+    content type and whether the browser is showing it as plain text. For an ordinary
+    web page that is all it does — the page's content is not read, changed, or recorded.
+  </p>
+  <p>
+    Only when the page is a raw text document does the extension read its text: to
+    render it if it is Markdown, JSON, or CSV, and — for a plain-text page with no
+    recognisable file extension — to test whether it is JSON. That happens entirely on
+    your device; the text never leaves it, and nothing about it is stored.
+  </p>
+  <p>
+    So that CSV files can be displayed at all, the extension changes one response header
+    (<strong>Content-Type</strong>) on top-level navigations to CSV files, which makes
+    the browser show the file instead of downloading it. Files a site marks as downloads
+    are left alone. No content is read or sent anywhere by this rule.
+  </p>
+  <p>
+    The <strong>Open a file</strong> page (the toolbar icon) reads a file you pick or
+    drop, in that page, to render it. It is not uploaded or stored.
   </p>
   <p>
     If a Markdown file references an image by URL, your browser fetches that image when
@@ -63,11 +80,24 @@
     itself requests nothing.
   </p>
 
+  <h2>Permissions, and why</h2>
+  <ul>
+    <li><strong>Storage</strong> — remembers your theme. The only value stored.</li>
+    <li><strong>Scripting</strong> — loads the viewer into a tab, only after the check
+        above has confirmed the tab is a raw Markdown, JSON, or CSV document. This keeps
+        the viewer's code off every ordinary page.</li>
+    <li><strong>Declarative Net Request</strong> — the single CSV header rule described
+        above. It blocks and redirects nothing.</li>
+    <li><strong>Access to all sites and file URLs</strong> — a JSON response, a Markdown
+        file, or a CSV can live at any address, so the check cannot be limited to a list
+        of sites.</li>
+  </ul>
+
   <h2>Local files</h2>
   <p>
     Rendering files on your own disk (<strong>file://</strong> addresses) works only if
     you enable "Allow access to file URLs" for this extension in your browser's
-    settings. That grant is used solely to read the Markdown file you chose to open.
+    settings. That grant is used solely to read the file you chose to open.
   </p>
 
   <h2>Deleting your data</h2>
@@ -84,9 +114,9 @@
 
 <footer class="site">
   <div class="wrap">
-    <span>Markdown Viewer</span>
+    <span>Rawlens</span>
     <span class="spacer"></span>
-    <a href="https://github.com/CaptaiN785/markdown-viewer">GitHub</a>
+    <a href="https://github.com/CaptaiN785/rawlens">GitHub</a>
     <a href="index.html">Home</a>
   </div>
 </footer>

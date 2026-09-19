@@ -1,14 +1,19 @@
-# markdown-viewer-site
+# rawlens-site
 
-Landing page and privacy policy for the
-[Markdown Viewer](https://github.com/CaptaiN785/markdown-viewer) browser
-extension.
+Landing page and privacy policy for
+[Rawlens](https://github.com/CaptaiN785/rawlens) — the Markdown, JSON & CSV
+viewer browser extension (formerly *Markdown Viewer*).
 
-Live at <https://captain785.github.io/markdown-viewer-site/> via GitHub Pages
-(branch `main`, path `/`). `privacy.html` is the privacy-policy URL the Chrome
-Web Store listing will depend on — do not rename this repo or turn Pages off
-once the listing is live.
+Live at <https://rawlens.kryl.dev/>, served by Netlify from this repo
+(`netlify.toml`: publish the repo root, no build). `privacy.html` is the
+privacy-policy URL the Chrome Web Store listing depends on — once the listing
+is live, do not move that page, drop the custom domain, or let `kryl.dev`
+lapse.
 
-Static: `index.html`, `privacy.html`, `style.css`, `favicon.png`, `shots/`.
-No build. Screenshots come from the extension repo's `store-assets/`
-(regenerate there, copy here).
+Static: `index.html`, `privacy.html`, `style.css`, `favicon.svg`,
+`favicon.png`, `shots/`. No build.
+
+- `privacy.html` mirrors the extension repo's `PRIVACY.md` — change both
+  together.
+- `shots/` and the favicons come from the extension repo (`store-assets/`,
+  `icons/icon.svg`, `icons/icon128.png`); regenerate there, copy here.
