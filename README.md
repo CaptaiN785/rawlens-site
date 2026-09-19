@@ -7,11 +7,18 @@ viewer browser extension (formerly *Markdown Viewer*).
 Live at <https://rawlens.kryl.dev/> on Netlify (project `rawlens`;
 `netlify.toml`: publish the repo root, no build). The Netlify project is **not
 connected to this repo** — a push does not deploy. Deploy by hand after merging
-to `main`:
+to `main`, from any directory:
 
 ```
-netlify deploy --prod --dir . --site d2726fcf-7428-4e2f-ab56-6307414d702c
+node deploy.js            # production
+node deploy.js --draft    # preview URL, production untouched
 ```
+
+**Never the bare `netlify deploy --dir . --site …`** — that publishes whatever
+the shell's current directory is. Run from the parent folder it started
+uploading every project there to this site (2026-09-20; caught mid-upload,
+never published). `deploy.js` takes the directory from its own location and
+refuses a folder that does not look like this site.
 
 DNS: `rawlens.kryl.dev` is a proxied `CNAME` to `rawlens.netlify.app` in the
 `kryl.dev` Cloudflare zone; Netlify's default certificate sits behind it.
@@ -22,7 +29,8 @@ is live, do not move that page, drop the custom domain, or let `kryl.dev`
 lapse.
 
 Static: `index.html`, `privacy.html`, `style.css`, `favicon.svg`,
-`favicon.png`, `shots/`. No build.
+`favicon.png`, `shots/`. No build. (`deploy.js`, `netlify.toml`, and this
+README are published along with them — nothing in them is private.)
 
 - `privacy.html` mirrors the extension repo's `PRIVACY.md` — change both
   together.
