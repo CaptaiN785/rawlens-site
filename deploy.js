@@ -35,5 +35,7 @@ if (unexpected.length) {
 const args = ['deploy', '--dir', dir, '--site', SITE_ID];
 if (!process.argv.includes('--draft')) args.push('--prod');
 console.log(`Deploying ${dir}\n> netlify ${args.join(' ')}`);
-const result = spawnSync('netlify', args, { stdio: 'inherit', shell: true });
+// cwd too: the CLI drops its .netlify/ state folder wherever it runs — keep it
+// here, where it is gitignored, not in whatever project the shell was in
+const result = spawnSync('netlify', args, { stdio: 'inherit', shell: true, cwd: dir });
 process.exit(result.status === null ? 1 : result.status);

@@ -5,13 +5,16 @@ Landing page and privacy policy for
 viewer browser extension (formerly *Markdown Viewer*).
 
 Live at <https://rawlens.kryl.dev/> on Netlify (project `rawlens`;
-`netlify.toml`: publish the repo root, no build). The Netlify project is **not
-connected to this repo** — a push does not deploy. Deploy by hand after merging
-to `main`, from any directory:
+`netlify.toml`: publish the repo root, no build). The project is **connected to
+this repo** through Netlify's GitHub App — **a push to `main` deploys to
+production**; other branches do not build. `privacy.html` is live the moment a
+change to it reaches `main`, so review it before merging.
+
+A manual deploy is still possible, from any directory:
 
 ```
-node deploy.js            # production
 node deploy.js --draft    # preview URL, production untouched
+node deploy.js            # production — normally just push to main instead
 ```
 
 **Never the bare `netlify deploy --dir . --site …`** — that publishes whatever
